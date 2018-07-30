@@ -6,11 +6,11 @@
 #    By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/30 06:27:18 by wseegers          #+#    #+#              #
-#    Updated: 2018/07/25 11:10:36 by wseegers         ###   ########.fr        #
+#    Updated: 2018/07/30 19:36:27 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ../libwtcc.a
+NAME = libwtcc.a
 CC = clang
 CFLAGS = -Wall -Wextra -Werror
 INC := -I include
@@ -28,10 +28,10 @@ F_MEMORY_SRC = f_membzero.c f_memchr.c f_memcpy.c f_memmove.c f_rawmemchr.c\
 F_MEMORY = $(addprefix f_memory/, $(F_MEMORY_SRC))
 
 F_PRINT_SRC = f_print_char.c f_print_nbr.c  f_print_str.c pf_handle_str.c\
-			  f_printf.c pf_get_tag.c parse_tag.c init_tag.c\
-			  pf_nbrtostr.c pf_wctostr.c pf_wstrtostr.c\
-			  s_tag_get_width.c s_tag_get_prec.c pf_padding.c f_vdprintf.c\
-			  pf_handle_int.c
+			  f_printf.c pf_get_tag.c pf_parse_tag.c pf_init_tag.c\
+			  pf_nbrtostr.c pf_wctostr.c pf_wstrtostr.c f_vdprintf.c\
+			  pf_handle_int1.c f_putchar.c pf_buffer.c pf_handle_char.c\
+			  pf_handle_int2.c pf_get_width_prec.c
 F_PRINT = $(addprefix f_print/, $(F_PRINT_SRC))
 
 F_STRING_SRC = f_strcmp.c f_strdel.c f_strdup.c f_strlcat.c f_strlen.c\
