@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   f_string.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
+/*   By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 17:36:59 by wseegers          #+#    #+#             */
-/*   Updated: 2018/06/24 08:25:59 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/08/02 10:52:55 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 size_t	f_strlen(const char *str);
 char	*f_strjoin(char const *s1, char const *s2);
+char	*f_strcjoin(char const *s1, char const *s2, char c);
 char	*f_strcpy(char *dest, const char *src);
 int		f_strcmp(const char *s1, const char *s2);
 int		f_strncmp(const char *s1, const char *s2, size_t n);
