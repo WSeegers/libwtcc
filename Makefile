@@ -6,7 +6,7 @@
 #    By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/30 06:27:18 by wseegers          #+#    #+#              #
-#    Updated: 2018/08/02 11:03:22 by wseegers         ###   ########.fr        #
+#    Updated: 2018/08/02 11:41:09 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ S_GRID = $(addprefix s_grid/, $(S_GRID_SRC))
 S_LIST_SRC = s_list_append.c s_list_create.c s_list_node_create.c\
 			 s_list_clear.c s_list_init.c s_list_pop.c s_list_insert.c\
 			 s_list_getnode.c s_list_rot.c s_list_get.c s_list_find.c\
-			 s_list_func_find.c s_list_copy.c s_list_mergesort.c
+			 s_list_func_find.c s_list_copy.c s_list_mergesort.c s_list_to_str.c
 S_LIST = $(addprefix s_list/, $(S_LIST_SRC))
 
 S_DSTR_SRC = capchk_dstr.c cat_dstr.c cat_str.c cut_dstr.c del_dstr.c\

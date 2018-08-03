@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   s_list.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
+/*   By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/02 02:01:15 by wseegers          #+#    #+#             */
-/*   Updated: 2018/06/16 10:28:44 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/08/02 11:27:14 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ typedef struct		s_list
 }					t_list;
 
 void				s_list_init(t_list *list, void (*del_data)(void*));
+char				*s_list_tostr(t_list *list, char divider,
+						char *(to_str)(void*));
 t_list				*s_list_create(void (*del_data)(void*));
 bool				s_list_append(t_list *list, void *data);
 void				s_list_insert(t_list *list, void *data, int i);
