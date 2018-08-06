@@ -6,14 +6,13 @@
 /*   By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/02 10:00:53 by wseegers          #+#    #+#             */
-/*   Updated: 2018/08/03 03:58:52 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/08/06 16:32:18 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "s_list_node.h"
 #include "s_list.h"
 #include "f_string.h"
-#include "f_print.h" //debug
 
 char	*s_list_tostr(t_list *list, char divider, char *(to_str)(void*))
 {
