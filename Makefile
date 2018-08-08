@@ -6,7 +6,7 @@
 #    By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/30 06:27:18 by wseegers          #+#    #+#              #
-#    Updated: 2018/08/08 11:57:24 by wseegers         ###   ########.fr        #
+#    Updated: 2018/08/08 19:48:42 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,7 @@ OBJ_LIST = $(patsubst %.c, %.o, $(F_IO) $(F_MATH) $(F_MEMORY) $(F_PRINT)\
 				$(S_VECTOR))
 BIN_PATH = bin
 BIN = $(addprefix $(BIN_PATH)/, $(OBJ_LIST))
+DEP := $(BIN:%.o=%.d)
 
 all : $(NAME)
 
@@ -89,6 +90,8 @@ $(BIN_PATH)/%.o :  %.c
 	@mkdir -p $(addprefix $(BIN_PATH)/,$(dir $<))
 	$(CC) $(CFLAGS) $(INC) -MMD -c $< -o $@
 
+-include $(DEP)
+
 clean :
 	rm -rf $(BIN_PATH)
 
@@ -96,6 +99,3 @@ fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
-
-debug :
-	@echo $(BIN)
