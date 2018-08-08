@@ -6,7 +6,7 @@
 #    By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/30 06:27:18 by wseegers          #+#    #+#              #
-#    Updated: 2018/08/02 11:41:09 by wseegers         ###   ########.fr        #
+#    Updated: 2018/08/08 11:57:24 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ F_IO_SRC = f_feedf.c f_initf.c f_openf.c f_readf.c f_writef.c f_stdio.c\
 		   f_next_line.c f_skip_line.c f_closef.c
 F_IO = $(addprefix f_io/, $(F_IO_SRC))
 
-F_MATH_SRC = f_abs.c  f_max.c  f_min.c
+F_MATH_SRC = f_abs.c  f_max.c  f_min.c f_quadratic_discriminant.c\
+			 f_quadratic_solve.c
 F_MATH = $(addprefix f_math/, $(F_MATH_SRC))
 
 F_MEMORY_SRC = f_membzero.c f_memchr.c f_memcpy.c f_memmove.c f_rawmemchr.c\
