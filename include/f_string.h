@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 17:36:59 by wseegers          #+#    #+#             */
-/*   Updated: 2018/08/02 10:52:55 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/08/15 13:06:46 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*f_strchr(const char *s, int c);
 char	*f_strstr(const char *haystack, const char *needle);
 long	f_strtol(const char *nptr, char **endptr, int base);
 int		f_atoi(const char *nptr);
+double	f_atof(const char *s);
 char	*f_itoa_base(long long nbr, unsigned int base);
 char	*f_utoa_base(unsigned long long unbr, unsigned int base);
 void	f_striter(char *s, void (*f)(char *));
