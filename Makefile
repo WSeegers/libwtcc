@@ -6,7 +6,7 @@
 #    By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/30 06:27:18 by wseegers          #+#    #+#              #
-#    Updated: 2018/08/02 11:41:09 by wseegers         ###   ########.fr        #
+#    Updated: 2018/08/15 16:51:28 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ F_IO_SRC = f_feedf.c f_initf.c f_openf.c f_readf.c f_writef.c f_stdio.c\
 		   f_next_line.c f_skip_line.c f_closef.c
 F_IO = $(addprefix f_io/, $(F_IO_SRC))
 
-F_MATH_SRC = f_abs.c  f_max.c  f_min.c
+F_MATH_SRC = f_abs.c  f_max.c  f_min.c f_quadratic_discriminant.c\
+			 f_quadratic_solve.c
 F_MATH = $(addprefix f_math/, $(F_MATH_SRC))
 
 F_MEMORY_SRC = f_membzero.c f_memchr.c f_memcpy.c f_memmove.c f_rawmemchr.c\
@@ -31,7 +32,7 @@ F_PRINT_SRC = f_print_char.c f_print_nbr.c  f_print_str.c pf_handle_str.c\
 			  f_printf.c pf_get_tag.c pf_parse_tag.c pf_init_tag.c\
 			  pf_nbrtostr.c pf_wctostr.c pf_wstrtostr.c f_vdprintf.c\
 			  pf_handle_int1.c f_putchar.c pf_buffer.c pf_handle_char.c\
-			  pf_handle_int2.c pf_get_width_prec.c
+			  pf_handle_int2.c pf_get_width_prec.c 
 F_PRINT = $(addprefix f_print/, $(F_PRINT_SRC))
 
 F_STRING_SRC = f_strcmp.c f_strdel.c f_strdup.c f_strlcat.c f_strlen.c\
@@ -39,7 +40,7 @@ F_STRING_SRC = f_strcmp.c f_strdel.c f_strdup.c f_strlcat.c f_strlen.c\
 			   f_strchr.c f_islower.c f_toupper.c f_isspace.c f_isblank.c\
 			   f_atoi.c f_strtol.c f_isdigit.c f_strcpy.c f_strjoin.c\
 			   f_strstr.c f_strncmp.c f_itoa_base.c f_striter.c f_strsplit.c\
-			   f_strarrdel.c f_isdigits.c f_strcjoin.c
+			   f_strarrdel.c f_isdigits.c f_strcjoin.c f_atof.c
 F_STRING = $(addprefix f_string/, $(F_STRING_SRC))
 
 F_CNTL_SRC = f_exit.c
@@ -76,6 +77,7 @@ OBJ_LIST = $(patsubst %.c, %.o, $(F_IO) $(F_MATH) $(F_MEMORY) $(F_PRINT)\
 				$(S_VECTOR))
 BIN_PATH = bin
 BIN = $(addprefix $(BIN_PATH)/, $(OBJ_LIST))
+DEP := $(BIN:%.o=%.d)
 
 all : $(NAME)
 
@@ -88,6 +90,8 @@ $(BIN_PATH)/%.o :  %.c
 	@mkdir -p $(addprefix $(BIN_PATH)/,$(dir $<))
 	$(CC) $(CFLAGS) $(INC) -MMD -c $< -o $@
 
+-include $(DEP)
+
 clean :
 	rm -rf $(BIN_PATH)
 
@@ -95,6 +99,3 @@ fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
-
-debug :
-	@echo $(BIN)

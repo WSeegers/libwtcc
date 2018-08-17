@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 11:53:54 by wseegers          #+#    #+#             */
-/*   Updated: 2018/07/19 16:28:38 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/08/07 11:52:34 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@
 long long	f_abs(long long nbr);
 long		f_min(long base, long test);
 long		f_max(long base, long test);
-
+double		f_quadratic_discriminant(double a, double b, double c);
+int			f_quadratic_solve(double a, double b, double c, double answer[2]);
 #endif
