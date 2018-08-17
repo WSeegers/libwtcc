@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   s_list_mergesort.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
+/*   By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/12 10:48:45 by wseegers          #+#    #+#             */
-/*   Updated: 2018/06/18 12:51:55 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/08/17 10:21:54 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "s_list.h"
 #include "f_print.h"
+#include "f_memory.h"
 
 static void	split_list(t_list *list, t_list *list_a, t_list *list_b)
 {
@@ -72,5 +73,9 @@ void		s_list_mergesort(t_list *list, int (*f_data_cmp)(void*, void*))
 		s_list_mergesort(list_a, f_data_cmp);
 		s_list_mergesort(list_b, f_data_cmp);
 		merge_lists(list, list_a, list_b, f_data_cmp);
+		s_list_clear(list_a);
+		f_memdel((void**)&list_a);
+		s_list_clear(list_b);
+		f_memdel((void**)&list_b);
 	}
 }
