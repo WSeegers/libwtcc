@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/15 12:20:40 by wseegers          #+#    #+#             */
-/*   Updated: 2018/08/15 13:04:30 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/08/20 04:55:45 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	parse_scientific_notation(const char **str, int e)
 	return (e);
 }
 
-double	f_atof(const char *s)
+double		f_atof(const char *s)
 {
 	double	a;
 	int		e;
