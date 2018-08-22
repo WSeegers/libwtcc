@@ -6,7 +6,7 @@
 #    By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/30 06:27:18 by wseegers          #+#    #+#              #
-#    Updated: 2018/08/15 16:51:28 by wseegers         ###   ########.fr        #
+#    Updated: 2018/08/22 20:26:01 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ F_STRING_SRC = f_strcmp.c f_strdel.c f_strdup.c f_strlcat.c f_strlen.c\
 			   f_strchr.c f_islower.c f_toupper.c f_isspace.c f_isblank.c\
 			   f_atoi.c f_strtol.c f_isdigit.c f_strcpy.c f_strjoin.c\
 			   f_strstr.c f_strncmp.c f_itoa_base.c f_striter.c f_strsplit.c\
-			   f_strarrdel.c f_isdigits.c f_strcjoin.c f_atof.c
+			   f_strarrdel.c f_isdigits.c f_strcjoin.c f_atof.c f_strrchar.c
 F_STRING = $(addprefix f_string/, $(F_STRING_SRC))
 
 F_CNTL_SRC = f_exit.c
