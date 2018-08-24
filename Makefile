@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+         #
+#    By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/30 06:27:18 by wseegers          #+#    #+#              #
-#    Updated: 2018/08/22 20:26:01 by wseegers         ###   ########.fr        #
+#    Updated: 2018/08/24 21:43:00 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ F_PRINT_SRC = f_print_char.c f_print_nbr.c  f_print_str.c pf_handle_str.c\
 			  f_printf.c pf_get_tag.c pf_parse_tag.c pf_init_tag.c\
 			  pf_nbrtostr.c pf_wctostr.c pf_wstrtostr.c f_vdprintf.c\
 			  pf_handle_int1.c f_putchar.c pf_buffer.c pf_handle_char.c\
-			  pf_handle_int2.c pf_get_width_prec.c 
+			  pf_handle_int2.c pf_get_width_prec.c f_fprintf.c
 F_PRINT = $(addprefix f_print/, $(F_PRINT_SRC))
 
 F_STRING_SRC = f_strcmp.c f_strdel.c f_strdup.c f_strlcat.c f_strlen.c\
