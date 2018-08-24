@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   f_fprinf.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/04 17:11:58 by wseegers          #+#    #+#             */
-/*   Updated: 2018/07/30 15:31:01 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/08/24 21:34:35 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdargs.h>
+#include <stdarg.h>
 #include "f_print.h"
 
-int		f_vfprintf(t_file file, const char *format, va_list ap)
+int		f_vfprintf(t_file *file, const char *format, va_list ap)
 {
 	return (f_vdprintf(file->fd_out, format, ap));
 }
 
-int		f_fprintf(t_file file, const char *format, ...)
+int		f_fprintf(t_file *file, const char *format, ...)
 {
 	va_list ap;
 
 	va_start(ap, format);
-	return (f_vfprintf(file, fmt, ap));
+	return (f_vfprintf(file, format, ap));
 }
