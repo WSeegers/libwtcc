@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   f_string.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 17:36:59 by wseegers          #+#    #+#             */
-/*   Updated: 2018/08/22 20:25:25 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/09/02 15:30:42 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,10 @@ char	*f_utoa_base(unsigned long long unbr, unsigned int base);
 void	f_striter(char *s, void (*f)(char *));
 char	**f_strsplit(char const *s, char c);
 void	f_strarrdel(char **array);
+char	*f_strsub(char const *str, unsigned int start, size_t len);
+int		f_isalnum(int c);
+int		f_isalpha(int c);
+int		f_isupper(int c);
 int		f_islower(int c);
 int		f_toupper(int c);
 int		f_isblank(int c);

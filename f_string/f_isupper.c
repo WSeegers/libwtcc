@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   f_isupper.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/20 23:56:09 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/05/23 12:55:38 by wseegers         ###   ########.fr       */
+/*   Created: 2018/04/21 00:10:53 by WSeegers          #+#    #+#             */
+/*   Updated: 2018/09/02 15:28:51 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "f_string.h"
 
-int		ft_isalpha(int c)
+int		f_isupper(int c)
 {
-	return (ft_islower(c) || ft_isupper(c));
+	return (c >= 'A' && c <= 'Z');
 }

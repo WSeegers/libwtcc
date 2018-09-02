@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   f_strsub.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 21:54:41 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/23 21:01:47 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/09/02 15:31:21 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "f_string.h"
 
-char	*ft_strsub(char const *str, t_uint start, size_t len)
+char	*f_strsub(char const *str, unsigned int start, size_t len)
 {
-	char	*ret;
-	t_uint	i;
+	char			*ret;
+	unsigned int	i;
 
-	if (!str || !(ret = ft_strnew(len)))
+	if (!str || !(ret = f_strnew(len)))
 		return (NULL);
 	i = -1;
 	while (++i < len)

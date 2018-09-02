@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   f_isalnum.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/21 00:30:58 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/05/23 11:09:56 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/09/02 15:30:31 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "f_string.h"
 
-int		ft_isalnum(int c)
+int		f_isalnum(int c)
 {
-	return (ft_isdigit(c) || ft_isalpha(c));
+	return (f_isdigit(c) || f_isalpha(c));
 }
