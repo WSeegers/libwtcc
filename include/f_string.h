@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 17:36:59 by wseegers          #+#    #+#             */
-/*   Updated: 2018/09/02 15:30:42 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/09/02 19:28:57 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	f_striter(char *s, void (*f)(char *));
 char	**f_strsplit(char const *s, char c);
 void	f_strarrdel(char **array);
 char	*f_strsub(char const *str, unsigned int start, size_t len);
+char	*f_strtrim(char const *s);
 int		f_isalnum(int c);
 int		f_isalpha(int c);
 int		f_isupper(int c);

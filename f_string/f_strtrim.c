@@ -1,41 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   f_strtrim.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 22:10:18 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/23 11:06:40 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/09/02 20:08:44 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "f_string.h"
 
-static int	iswhitespace(char c)
+char		*f_strtrim(char const *s)
 {
-	return (c == ' ' || c == '\t' || c == '\n');
-}
-
-char		*ft_strtrim(char const *s)
-{
-	char	*start;
 	char	*ret;
-	size_t	len;
+	char	*p;
+	char	c;
 
-	if (!s)
-		return (NULL);
-	while (iswhitespace(*s))
-		s++;
-	if (!*s)
-		return (ft_strdup(""));
-	start = (char*)s;
-	len = 1;
-	while (*++s)
-		len++;
-	while (iswhitespace(*--s))
-		len--;
-	if (!(ret = ft_strnew(len)))
-		return (NULL);
-	return (ft_strncpy(ret, start, len));
+	ret = f_strnew(f_strlen(s));
+	p = ret;
+	while (f_isspace(*s))
+			s++;
+	while (*s)
+	{
+		if ((c = *s) == '\'' || c == '\"')
+			while ((*p++ = *s++) && *s != c)
+				;
+		*p++ = *s++;
+		if (f_isspace(*s))
+		{
+			*p++ = ' ';
+			while (*s && f_isspace(*s))
+				s++;
+		}
+	}
+	return (ret);
 }
