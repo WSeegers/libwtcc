@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   f_strtrim.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
+/*   By: wseegers <wseegers@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 22:10:18 by wseegers          #+#    #+#             */
-/*   Updated: 2018/09/02 20:08:44 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/09/04 08:43:42 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char		*f_strtrim(char const *s)
 	ret = f_strnew(f_strlen(s));
 	p = ret;
 	while (f_isspace(*s))
-			s++;
+		s++;
 	while (*s)
 	{
 		if ((c = *s) == '\'' || c == '\"')
